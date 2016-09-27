@@ -1,0 +1,25 @@
+{
+  "bills-receive":[
+    {
+      "id":1,
+      "date_due":"2016-09-20",
+      "name":"Salário",
+      "value":2000,
+      "done":true
+    },
+    {
+      "id":2,
+      "date_due":"2016-10-12",
+      "name":"Extras",
+      "value":550,
+      "done":false
+    },
+    {
+      "id":4,
+      "date_due":"2016-09-25",
+      "name":"Investimentos",
+      "value":625.99,
+      "done":true
+    }
+  ]
+}
