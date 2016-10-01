@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8093170f-7db5-46f7-8457-77a0ef5c3ce8" name="Default" comment="ES6 com VueJS">
+    <list default="true" id="8093170f-7db5-46f7-8457-77a0ef5c3ce8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bill-pay/bill-pay-list.component.js" afterPath="$PROJECT_DIR$/dist/bill-pay/bill-pay-list.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bill-pay/bill-pay.component.js" afterPath="$PROJECT_DIR$/dist/bill-pay/bill-pay.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bill-pay/bill-pay-list.component.js" afterPath="$PROJECT_DIR$/src/bill-pay/bill-pay-list.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bill-pay/bill-pay.component.js" afterPath="$PROJECT_DIR$/src/bill-pay/bill-pay.component.js" />
     </list>
     <ignored path="vue.js.iws" />
@@ -66,13 +63,15 @@
       <file leaf-file-name="bill-pay.component.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bill-pay/bill-pay.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="754">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
               <folding>
-                <marker date="1475364018672" expanded="true" signature="157:410" ph="..." />
-                <marker date="1475364018672" expanded="true" signature="440:833" ph="..." />
-                <marker date="1475364018672" expanded="true" signature="476:818" ph="..." />
-                <marker date="1475364018672" expanded="true" signature="627:696" ph="..." />
+                <marker date="1475364362426" expanded="true" signature="157:410" ph="..." />
+                <marker date="1475364362426" expanded="true" signature="440:976" ph="..." />
+                <marker date="1475364362426" expanded="true" signature="476:961" ph="..." />
+                <marker date="1475364362426" expanded="true" signature="627:696" ph="..." />
+                <marker date="1475364362426" expanded="true" signature="730:891" ph="..." />
+                <marker date="1475364362426" expanded="true" signature="781:868" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,7 +158,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1178" />
+    <option name="width" value="1138" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -375,7 +374,7 @@
       <workItem from="1475278685799" duration="2101000" />
       <workItem from="1475338723777" duration="52000" />
       <workItem from="1475345389474" duration="1208000" />
-      <workItem from="1475362597662" duration="1444000" />
+      <workItem from="1475362597662" duration="1873000" />
     </task>
     <task id="LOCAL-00001" summary="Teste">
       <created>1474417314155</created>
@@ -447,11 +446,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474853273298</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Grids e Section">
+      <created>1475364066792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1475364066792</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109258000" />
+    <option name="totallyTimeSpent" value="109687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,10 +469,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1178" height="1057" extended-state="0" />
+    <frame x="-7" y="0" width="1138" height="1057" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23971377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24860853" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32690248" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -510,7 +516,8 @@
     <MESSAGE value="Two-way filter e write" />
     <MESSAGE value="Usando a classe Bill no projeto" />
     <MESSAGE value="ES6 com VueJS" />
-    <option name="LAST_COMMIT_MESSAGE" value="ES6 com VueJS" />
+    <MESSAGE value="Grids e Section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grids e Section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -828,13 +835,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bill-pay/bill-pay.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="754">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
           <folding>
-            <marker date="1475364018672" expanded="true" signature="157:410" ph="..." />
-            <marker date="1475364018672" expanded="true" signature="440:833" ph="..." />
-            <marker date="1475364018672" expanded="true" signature="476:818" ph="..." />
-            <marker date="1475364018672" expanded="true" signature="627:696" ph="..." />
+            <marker date="1475364362426" expanded="true" signature="157:410" ph="..." />
+            <marker date="1475364362426" expanded="true" signature="440:976" ph="..." />
+            <marker date="1475364362426" expanded="true" signature="476:961" ph="..." />
+            <marker date="1475364362426" expanded="true" signature="627:696" ph="..." />
+            <marker date="1475364362426" expanded="true" signature="730:891" ph="..." />
+            <marker date="1475364362426" expanded="true" signature="781:868" ph="..." />
           </folding>
         </state>
       </provider>

@@ -17,7 +17,11 @@ window.billPayComponent = Vue.extend({
                 <h3 :class="{'nenhumaConta' : status === false, 'pago' : status === 0, 'nao-pago' : status > 0}">
                     {{status | statusGeneral}}
                 </h3>
-                <h3>{{total | currency 'R$ '}}</h3>
+                <div class="row">
+                    <div class="col s5 offset-s7">
+                        <h3>{{total | currency 'R$ '}}</h3>
+                    </div>
+                </div>
                 <menu-component></menu-component> 
             </div>
         </div>    
