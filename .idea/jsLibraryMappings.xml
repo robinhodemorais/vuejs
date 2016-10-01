@@ -3,6 +3,7 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{vue.js/node_modules}" />
     <file url="file://$PROJECT_DIR$/bills-api" libraries="{vue.js/bills-api/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-bills-api" libraries="{vue.js/vue-bills-api/node_modules}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
   </component>
 </project>
