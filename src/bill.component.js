@@ -11,7 +11,10 @@ window.billComponent = Vue.extend({
                             </ul>
                 </div>
             </nav>
-        </div>            
+        </div>     
+        <div class="hide-on-small-only">
+            teste jhdskahdaksh
+        </div>
         <router-view></router-view>
         `,
     data() {
