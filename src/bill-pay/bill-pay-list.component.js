@@ -6,6 +6,11 @@ window.billPayListComponent = Vue.extend({
             </style>
             <div class="container">
                 <div class="row">
+                    <div class="col">
+                    <div></div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col s12">
                         <table border="1" cellpadding="10">
                             <thead>

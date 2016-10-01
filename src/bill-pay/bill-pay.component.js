@@ -11,12 +11,16 @@ window.billPayComponent = Vue.extend({
             .nenhumaConta {color: grey;}
             .minha-classe {background-color: burlywood;}
         </style>
-        <h1>{{ title }}</h1>
-        <h3 :class="{'nenhumaConta' : status === false, 'pago' : status === 0, 'nao-pago' : status > 0}">
-            {{status | statusGeneral}}
-        </h3>
-        <h3>{{total | currency 'R$ '}}</h3>
-        <menu-component></menu-component> 
+        <div class="section">
+            <div class="container">
+                <h1>{{ title }}</h1>
+                <h3 :class="{'nenhumaConta' : status === false, 'pago' : status === 0, 'nao-pago' : status > 0}">
+                    {{status | statusGeneral}}
+                </h3>
+                <h3>{{total | currency 'R$ '}}</h3>
+                <menu-component></menu-component> 
+            </div>
+        </div>    
         <router-view></router-view>      
     `,
     data(){
