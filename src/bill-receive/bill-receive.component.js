@@ -11,12 +11,20 @@ window.billReceiveComponent = Vue.extend({
             .nenhumaConta {color: grey;}
             .minha-classe {background-color: burlywood;}
         </style> 
-         <h1>{{ title }}</h1>
-        <h3 :class="{'nenhumaConta' : status === false, 'recebido' : status === 0, 'nao-recebido' : status > 0}">
-            {{status | statusGeneralReceive}}
-        </h3>
-         <h3>{{total | currency 'R$ '}}</h3>
-        <menu-component></menu-component> 
+        <div class="section">
+            <div class="container">
+                 <h1>{{ title }}</h1>
+                <h3 :class="{'nenhumaConta' : status === false, 'recebido' : status === 0, 'nao-recebido' : status > 0}">
+                    {{status | statusGeneralReceive}}
+                </h3>
+                <div class="row">
+                    <div class="col s5 offset-s7">
+                        <h3>{{total | currency 'R$ '}}</h3>
+                    </div>
+                </div>
+                <menu-component></menu-component>
+            </div>
+        </div>            
         <router-view></router-view>      
     `,
     data(){
