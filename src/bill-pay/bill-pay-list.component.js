@@ -4,15 +4,9 @@ window.billPayListComponent = Vue.extend({
                 .pago {color: green;}
                 .nao-pago {color: red;}
             </style>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                    <div></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <table border="1" cellpadding="10">
+                <div class="container">
+                    <div class="row">
+                        <table class="bordered striped highlight centered responsive-table">
                             <thead>
                             <tr>
                                 <th>#</th>
@@ -40,11 +34,7 @@ window.billPayListComponent = Vue.extend({
                             </tbody>
                         </table>                      
                     </div>
-                    <!--<div class="col s2">
-                        texto
-                    </div>-->
                 </div>
-            </div>
     `,
     data() {
         return {
