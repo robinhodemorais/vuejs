@@ -6,7 +6,7 @@ window.billPayListComponent = Vue.extend({
             </style>
                 <div class="container">
                     <div class="row">
-                        <table class="bordered striped highlight centered responsive-table">
+                        <table class="bordered striped highlight centered responsive-table z-depth-5">
                             <thead>
                             <tr>
                                 <th>#</th>

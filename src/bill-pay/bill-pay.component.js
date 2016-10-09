@@ -18,11 +18,10 @@ window.billPayComponent = Vue.extend({
                     {{status | statusGeneral}}
                 </h3>
                 <div class="row">
-                    <div class="col s5 offset-s7">
+                    <div class="col s5 offset-s7 z-depth-1">
                         <h3>{{total | currency 'R$ '}}</h3>
                     </div>
                 </div>
-                <menu-component></menu-component> 
             </div>
         </div>    
         <router-view></router-view>      
