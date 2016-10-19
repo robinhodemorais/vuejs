@@ -14,7 +14,7 @@ Vue.filter('statusGeneral',(value) =>  {
     if(!value){
         return 'Nenhuma conta a pagar';
     } else {
-        return 'Existem ' + value + ' contas a serem pagas';
+        return value + ' contas á pagar';
     }
 });
 /*
@@ -47,7 +47,7 @@ Vue.filter('statusGeneralReceive',(value) =>  {
     if(!value){
         return 'Nenhuma contas a receber';
     } else {
-        return 'Existem ' + value + ' contas a serem recebidas';
+        return value + ' contas á receber';
     }
 });
 
