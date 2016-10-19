@@ -7,7 +7,7 @@ var names = ['Conta de luz', 'Conta de água', 'Conta de telefone', 'Supermercad
 //var -> escopo e contexto global
 
 window.billPayCreateComponent = Vue.extend({
-    template: '\n            <form action="" name="form" v-on:submit.prevent="submit">\n                <label>Vencimento:</label>\n                <input type="text" v-model="bill.date_due | dateFormat"><br><br>\n        \n                <label>Nome:</label>\n                <select v-model="bill.name">\n                    <option v-for="o in names" value="{{ o }}">{{ o }}</option>\n                </select><br><br>\n        \n                <label>Valor:</label>\n                <input type="text" v-model="bill.value | numberFormat"><br><br>\n        \n                <label>Pago?</label>\n                <input type="checkbox" v-model="bill.done"><br><br>\n        \n                <input type="submit" value="Enviar">\n            </form>    \n    ',
+    template: '\n            <div class="container">\n                <div class="row">\n                    <form action="" name="form" @submit.prevent="submit">\n                        <div class="row">\n                            <label>Vencimento:</label>\n                            <input type="text" v-model="bill.date_due | dateFormat">\n                        </div>\n                        <div class="row">\n                            <label>Nome:</label>\n                            <select v-model="bill.name" id="name" class="browser-default">\n                                <option value="" disabled selected>Escolha um nome</option>\n                                <option v-for="o in names" value="{{ o }}">{{ o }}</option>\n                            </select>\n                         </div>   \n                        <div class="row">                    \n                            <label>Valor:</label>\n                            <input type="text" v-model="bill.value | numberFormat">\n                        </div>\n                        <div class="row">                            \n                            <input type="checkbox" class="filled-in" v-model="bill.done" id="pago">\n                            <label for="pago">Pago?</label>\n                        </div>\n                        <input type="submit" value="Enviar">\n                    </form>                 \n                </div>\n            </div>\n              \n    ',
     //permite que um dado do escopo seja acessivel ao componente declarado no html
     //props:['bill'],
     data: function data() {
@@ -24,6 +24,10 @@ window.billPayCreateComponent = Vue.extend({
             this.formType = 'update';
             this.getBill(this.$route.params.id);
         }
+        //para mostrar a lista no combo do materialize
+        $(document).ready(function () {
+            $('#name').material_select();
+        });
     },
 
     methods: {

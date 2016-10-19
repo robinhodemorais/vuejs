@@ -1,22 +1,35 @@
 window.billReceiveCreateComponent = Vue.extend({
     template:`
-            <form action="" name="form" v-on:submit.prevent="submit">
-                <label>Vencimento:</label>
-                <input type="text" v-model="bill.date_due"><br><br>
-        
-                <label>Nome:</label>
-                <select v-model="bill.name">
-                    <option v-for="o in names" value="{{ o }}">{{ o }}</option>
-                </select><br><br>
-        
-                <label>Valor:</label>
-                <input type="text" v-model="bill.value | numberFormat"><br><br>
-        
-                <label>Recebido?</label>
-                <input type="checkbox" v-model="bill.done"><br><br>
-        
-                <input type="submit" value="Enviar">
-            </form>    
+            <div class="container">
+                <div class="row">
+                <form action="" name="form" v-on:submit.prevent="submit">
+                        <div class="row">
+                            <label>Vencimento:</label>
+                            <input type="text" v-model="bill.date_due">
+                        </div>
+                                
+                        <div class="row">
+                            <label>Nome:</label>
+                            <select v-model="bill.name" id="name" class="browser-default">
+                                <option value="" disabled selected>Escolha um nome</option>
+                                <option v-for="o in names" value="{{ o }}">{{ o }}</option>
+                            </select>
+                        </div> 
+          
+                        <div class="row">
+                          <label>Valor:</label>
+                            <input type="text" v-model="bill.value | numberFormat">
+                        </div>         
+                    
+                        <div class="row">
+                            <input type="checkbox" v-model="bill.done" id="recebido">
+                            <label for="recebido">Recebido?</label>
+                        </div>         
+            
+                        <input type="submit" value="Enviar">
+                    </form>   
+                </div>
+            </div>             
     `,
     //permite que um dado do escopo seja acessivel ao componente declarado no html
     //props:['bill'],
@@ -43,6 +56,10 @@ window.billReceiveCreateComponent = Vue.extend({
             this.formType = 'update';
             this.getBill(this.$route.params.id);
         }
+        //para mostrar a lista no combo do materialize
+        $(document).ready(function () {
+            $('#name').material_select();
+        })
     },
     methods: {
         submit() {

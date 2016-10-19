@@ -6,9 +6,9 @@ window.billComponent = Vue.extend({
             </li>
         </ul>
         <div class="navbar-fixed">
-            <nav>
+            <nav class="teal">
                 <div class="nav-wrapper container">
-                            <a href="#" class="right brand-logo">Code Contas</a>
+                            <a href="#" class="right brand-logo>Code Contas</a>
                             <a href="#" data-activates="nav-mobile" 
                                 class="button-collapse">
                                 <i class="material-icons">menu</i>
@@ -45,8 +45,8 @@ window.billComponent = Vue.extend({
         return {
             menus: [
                 {name: "DashBoard", routeName: 'dashboard'},
-                {name: "Contas a pagar", routeName: 'bill-pay.list', dropdownId: 'bill-pay'},
-                {name: "Contas a receber", routeName: 'bill-receive.list', dropdownId: 'bill-receive'},
+                {name: "Contas a pagar", routeName: 'bill-pay.list', dropdownId: 'bill-pay.list'},
+                {name: "Contas a receber", routeName: 'bill-receive.list', dropdownId: 'bill-receive.list'},
             ],
             menusDropdown: [
                 {
