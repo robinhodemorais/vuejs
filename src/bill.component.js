@@ -8,29 +8,25 @@ window.billComponent = Vue.extend({
         <div class="navbar-fixed">
             <nav class="teal">
                 <div class="nav-wrapper container">
-                            <a href="#" class="brand-logo>Code Contas</a>
-                            <a href="#" data-activates="nav-mobile" 
-                                class="button-collapse">
-                                <i class="material-icons">menu</i>
-                             </a>
-                            <ul class="left hide-on-med-and-down">
-                                <li v-for="o in menus">
-                                    <a v-if="o.dropdownId" class="dropdown-button"
-                                       href="!#"  v-bind:data-activates="o.dropdownId">
-                                         {{ o.name }} <i class="material-icons right">arrow_drop_down</i>
-                                    </a>
-                                    <a v-else v-link="{name: o.routeName}">{{o.name}}</a>
-                                </li>
-                            </ul>
-                            <ul id="nav-mobile" class="side-nav">
-                                <li v-for="o in menus">
-                                    <a v-link="{name: o.routeName}">
-                                      {{o.name}}
-                                    </a>
-                                </li>
-                            </ul>
+                    <a href="#" class="right brand-logo">Code Contas</a>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse">
+                       <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="left hide-on-med-and-down">
+                        <li v-for="o in menus">
+                           <a v-if="o.dropdownId" class="dropdown-button" href="!#"  v-bind:data-activates="o.dropdownId">
+                              {{ o.name }} <i class="material-icons right">arrow_drop_down</i>
+                           </a>
+                            <a v-else v-link="{name: o.routeName}">{{o.name}}</a>
+                        </li>
+                     </ul>
+                     <ul id="nav-mobile" class="side-nav">
+                         <li v-for="o in menus">
+                            <a v-link="{name: o.routeName}">{{o.name}}</a>
+                         </li>
+                      </ul>                           
                 </div>
-            </nav>
+            </nav>           
         </div>     
         <router-view></router-view>
         `,
@@ -45,8 +41,8 @@ window.billComponent = Vue.extend({
         return {
             menus: [
                 {name: "DashBoard", routeName: 'dashboard'},
-                {name: "Contas a pagar", routeName: 'bill-pay.list', dropdownId: 'bill-pay.list'},
-                {name: "Contas a receber", routeName: 'bill-receive.list', dropdownId: 'bill-receive.list'},
+                {name: "Contas a pagar", routeName: 'bill-pay.list', dropdownId: 'bill-pay'},
+                {name: "Contas a receber", routeName: 'bill-receive.list', dropdownId: 'bill-receive'},
             ],
             menusDropdown: [
                 {

@@ -29,6 +29,8 @@ window.billPayComponent = Vue.extend({
                 </div>               
             </div>
         </div>    
+        <!-- Adiciona uma separação-->
+        <div class="divider"></div>
         <router-view></router-view>      
     `,
     data(){
