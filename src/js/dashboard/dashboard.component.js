@@ -8,7 +8,7 @@ window.dashboardComponent = Vue.extend({
                         <div class="card z-depth-2 red" >
                             <div class="card-content white-text">
                                 <p class="card-title">
-                                    <p><i class="material-icons">account_balance</i><strong> CONTAS Á RECEBER</strong></p>
+                                    <p><i class="material-icons">account_balance</i><strong> CONTAS Á PAGAR</strong></p>
                                 </p>
                                 <h5>{{totalPay | currency 'R$ '}}</h5>
                             </div>
