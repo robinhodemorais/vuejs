@@ -32,6 +32,17 @@ window.billPayListComponent = Vue.extend({
                         </table>                      
                     </div>
                 </div>
+                <a class="btn waves-effect modal-trigger" href="#meu-modal">Abril Modal</a>
+                <button class="btn waves-effect modal-trigger" data-target="meu-modal">Abril Modal 2</button>
+                <div id="meu-modal" class="modal">
+                    <div class="modal-content">
+                        <h2>Meu primeiro modal</h2>
+                        <p>Texto do curso de laravel com vue.js</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-flat green modal-action modal-close">OK</button>
+                    </div>
+                </div>
     `,
     data() {
         return {
@@ -44,6 +55,9 @@ window.billPayListComponent = Vue.extend({
             //da classe pai, da classe que está a funcão
             this.bills = response.data;
         });
+        $(document).ready(function () {
+            $('.modal-trigger').leanModal();
+        })
         //let self = this;
         /*Bill.query().then(function (response) {
             //quando não usa o arrow function, tem que utilizar a variavel
