@@ -1,12 +1,20 @@
 window.modalComponent = Vue.extend({
     template: `
-        <div>Laravel com Vue</div> 
-        <slot name="slot1">2 + 2 = 4</slot>
-        <div>Laravel com Vue</div>
-        <slot name="slot2">2 + 2 = 4</slot>
-        `,
+        <div :id="modal.id" class="modal">
+            <div class="modal-content">
+                <slot name="content"></slot>
+            </div>
+            <div class="modal-content">
+                <slot name="footer"></slot>
+            </div>
+        </div>
+    `,
+    props: ['modal'],
     data() {
         return {
+            modal: {
+                id: ''
+            }
         };
     }
 });

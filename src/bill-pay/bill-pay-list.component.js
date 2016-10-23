@@ -1,4 +1,7 @@
 window.billPayListComponent = Vue.extend({
+    components:{
+        'modal': modalComponent
+    },
     template: `
                 <div class="container">
                     <div class="row">
@@ -25,28 +28,36 @@ window.billPayListComponent = Vue.extend({
                                 </td>
                                 <td>
                                     <a v-link="{ name: 'bill-pay.update', params: {id: o.id} }">Editar</a> |
-                                    <a href="#" @click.prevent="deleteBill(o)">Excluir</a>
+                                    <a href="#" @click.prevent="openModalDelete(o)">Excluir</a>
                                 </td>
                             </tr>
                             </tbody>
                         </table>                      
                     </div>
                 </div>
-                <a class="btn waves-effect modal-trigger" href="#meu-modal">Abril Modal</a>
-                <button class="btn waves-effect modal-trigger" data-target="meu-modal">Abril Modal 2</button>
-                <div id="meu-modal" class="modal">
-                    <div class="modal-content">
-                        <h2>Meu primeiro modal</h2>
-                        <p>Texto do curso de laravel com vue.js</p>
+                <modal :modal="modal">
+                    <div slot="content">
+                        <h4>Mensagem de confirmação</h4>
+                        <p><strong>Deseja excluir essa conta ?</strong></p>
+                        <div class="divider"></div>
+                        <p>Nome: <strong>{{billToDelete.name}}</strong></p>
+                        <p>Valor: <strong>{{billToDelete.value | numberFormat}}</strong> </p>
+                        <p>Data de Vencimento: <strong>{{billToDelete.date_due | dateFormat }}</strong></p>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-flat green modal-action modal-close">OK</button>
+                    <div slot="footer">
+                        <button class="btn btn-flat waves-effect green lighten-2 modal-action modal-close" 
+                                @click="deleteBill()">OK</button>
+                        <button class="btn btn-flat waves-effect red lighten-2 modal-action modal-close">Cancelar</button>
                     </div>
-                </div>
+                </modal>
     `,
     data() {
         return {
-            bills: []
+            bills: [],
+            billToDelete: null,
+            modal: {
+                id: 'modal-delete'
+            }
         };
     },
     created(){
@@ -55,25 +66,20 @@ window.billPayListComponent = Vue.extend({
             //da classe pai, da classe que está a funcão
             this.bills = response.data;
         });
-        $(document).ready(function () {
-            $('.modal-trigger').leanModal();
-        })
-        //let self = this;
-        /*Bill.query().then(function (response) {
-            //quando não usa o arrow function, tem que utilizar a variavel
-            //let self = this para pegar o this da classe pai, da classe que está a função
-            self.bills = response.data;
-        });*/
     },
     methods: {
-        deleteBill(bill) {
-            if(confirm('Deseja excluir esta conta?')){
-                //let self = this;
-                Bill.delete({id: bill.id}).then((response) => {
-                    this.bills.$remove(bill);
+        deleteBill() {
+           // if(confirm('Deseja excluir esta conta?')){
+                Bill.delete({id: this.billToDelete.id}).then((response) => {
+                    this.bills.$remove(this.billToDelete);
+                    this.billToDelete = null;
                     this.$dispatch('change-info');
                 });
-            }
+           // }
+        },
+        openModalDelete(bill){
+            this.billToDelete = bill;
+            $('#modal-delete').openModal();
         }
     }
 });

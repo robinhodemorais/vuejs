@@ -1,8 +1,13 @@
-"use strict";
+'use strict';
 
 window.modalComponent = Vue.extend({
-    template: "\n        <div>Laravel com Vue</div> \n        <slot name=\"slot1\">2 + 2 = 4</slot>\n        <div>Laravel com Vue</div>\n        <slot name=\"slot2\">2 + 2 = 4</slot>\n        ",
+    template: '\n        <div :id="modal.id" class="modal">\n            <div class="modal-content">\n                <slot name="content"></slot>\n            </div>\n            <div class="modal-content">\n                <slot name="footer"></slot>\n            </div>\n        </div>\n    ',
+    props: ['modal'],
     data: function data() {
-        return {};
+        return {
+            modal: {
+                id: ''
+            }
+        };
     }
 });
