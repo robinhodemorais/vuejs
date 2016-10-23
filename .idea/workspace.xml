@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8093170f-7db5-46f7-8457-77a0ef5c3ce8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bill-pay/bill-pay-list.component.js" afterPath="$PROJECT_DIR$/dist/bill-pay/bill-pay-list.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bill-pay/bill-pay-list.component.js" afterPath="$PROJECT_DIR$/src/bill-pay/bill-pay-list.component.js" />
     </list>
     <ignored path="vue.js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -352,7 +350,7 @@
       <workItem from="1476291021366" duration="1198000" />
       <workItem from="1476836926611" duration="7190000" />
       <workItem from="1477148718713" duration="4655000" />
-      <workItem from="1477184540796" duration="2837000" />
+      <workItem from="1477184540796" duration="2856000" />
     </task>
     <task id="LOCAL-00001" summary="Teste">
       <created>1474417314155</created>
@@ -501,11 +499,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477185495143</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Modals">
+      <created>1477187395955</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1477187395955</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138923000" />
+    <option name="totallyTimeSpent" value="138942000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -575,7 +580,8 @@
     <MESSAGE value="Refatorando topo da aplicação" />
     <MESSAGE value="Refatorando topo da aplicação e edição" />
     <MESSAGE value="Refatorando listagem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatorando listagem" />
+    <MESSAGE value="Modals" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modals" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
