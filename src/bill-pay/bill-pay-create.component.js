@@ -78,11 +78,13 @@ window.billPayCreateComponent = Vue.extend({
             //let self = this;
             if(this.formType == 'insert'){
                 Bill.save({},data).then((response) => {
+                    Materialize.toast('Conta criada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-pay.list'});
                 });
             }else{
                 Bill.update({id:this.bill.id},data).then((response) =>{
+                    Materialize.toast('Conta atualizada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-pay.list'});
                 });

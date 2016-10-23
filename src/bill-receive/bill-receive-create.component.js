@@ -1,3 +1,11 @@
+const names = [
+    'Salário',
+    'Investimentos',
+    'Poupança',
+    'Extras'
+    ]
+;
+
 window.billReceiveCreateComponent = Vue.extend({
     template:`
             <div class="container">
@@ -45,18 +53,8 @@ window.billReceiveCreateComponent = Vue.extend({
     data() {
         return {
             formType: 'insert',
-            names: [
-                'Salário',
-                'Investimentos',
-                'Poupança',
-                'Extras'
-            ],
-            bill: {
-                date_due: '',
-                name: '',
-                value: 0,
-                done: false
-            }
+            names: names,
+            bill: new BillRec()
         };
     },
     //função chamado logo apos criar o component
@@ -72,16 +70,18 @@ window.billReceiveCreateComponent = Vue.extend({
     },
     methods: {
         submit() {
-            var data = Vue.util.extend(this.bill, {date_due:this.getDateDue(this.bill.date_due)});
-            //var data = this.bill.toJSON();
+            var data = this.bill.toJSON();
+            //var data = Vue.util.extend(this.bill, {date_due:this.getDateDue(this.bill.date_due)});
             //let self = this;
             if(this.formType == 'insert'){
                 BillReceive.save({},data).then((response) => {
+                    Materialize.toast('Conta criada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-receive.list'});
                 });
             }else{
                 BillReceive.update({id:this.bill.id},data).then((response) => {
+                    Materialize.toast('Conta criada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-receive.list'});
                 });
@@ -90,8 +90,10 @@ window.billReceiveCreateComponent = Vue.extend({
         getBill(id) {
            // let self = this;
             BillReceive.get({id: id}).then((response) => {
-                this.bill = response.data;
+                //this.bill = response.data;
+                this.bill = new BillRec(response.data)
             });
+
         },
         getDateDue(date_due){
             let dateDueObject = date_due;

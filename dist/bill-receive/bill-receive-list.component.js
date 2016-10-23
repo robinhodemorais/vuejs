@@ -33,6 +33,7 @@ window.billReceiveListComponent = Vue.extend({
             BillReceive.delete({ id: this.billToDelete.id }).then(function (response) {
                 _this2.bills.$remove(_this2.billToDelete);
                 _this2.billToDelete = null;
+                Materialize.toast('Conta excluida com sucesso!', 4000);
                 _this2.$dispatch('change-info');
             });
             // }
