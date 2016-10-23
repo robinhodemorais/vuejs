@@ -1,4 +1,4 @@
-const names = [
+const namesReceive = [
     'Salário',
     'Investimentos',
     'Poupança',
@@ -53,7 +53,7 @@ window.billReceiveCreateComponent = Vue.extend({
     data() {
         return {
             formType: 'insert',
-            names: names,
+            names: namesReceive,
             bill: new BillRec()
         };
     },

@@ -1,6 +1,24 @@
 //Material Icons
 @import url(http://fonts.googleapis.com/icon?family=Material+Icons);
 
+@import "node_modules/materialize-css/sass/components/color";
+
+@import "variables";
+
 @import "node_modules/materialize-css/sass/materialize";
 
-//@import "node_modules/materialize-css/fonts";
+//Minhas Classes
+.my-custom-green{
+  @extend .green, .darken-1, .purple-text, .text-lighten-2;
+  font-size: 50px;
+}
+
+//cor do dropDown
+.my-custom-dropDown{
+  @extend .blue, .darken-3;
+}
+
+//Texto do menu dropDown
+.my-custom-a{
+  @extend .white-text, .text-lighten-2;
+}

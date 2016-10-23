@@ -1,22 +1,33 @@
 window.dashboardComponent = Vue.extend({
-   /* components: {
-        'menu-component': dashboardMenuComponent
-    },*/
     template: `
-        <style type="text/css">
-            .red {color: red;}
-            .green {color: green;}
-            .gray {color: gray;}
-        </style>
-        <h1>{{ title }}</h1>
-        <h3>
-            CONTAS Á PAGAR
-        </h3>
-        <h3>{{totalPay | currency 'R$ '}}</h3>
-        <h3>
-            CONTAS Á RECEBER
-        </h3>
-        <h3>{{totalReceive | currency 'R$ '}}</h3>
+         <div class="section">
+            <div class="container">
+                <h4>{{ title }}</h4>
+                <div class="row">
+                    <div class="col s6">                    
+                        <div class="card z-depth-2 red" >
+                            <div class="card-content white-text">
+                                <p class="card-title">
+                                    <p><i class="material-icons">account_balance</i><strong> CONTAS Á RECEBER</strong></p>
+                                </p>
+                                <h5>{{totalPay | currency 'R$ '}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">                        
+                         <div class="card z-depth-2 green" >
+                            <div class="card-content white-text">
+                                <p class="card-title">                                    
+                                    <p><i class="material-icons">payment</i><strong> CONTAS Á RECEBER</strong></p>
+                                </p>
+                                <h5>{{totalReceive | currency 'R$ '}}</h5>
+                            </div>
+                        </div>                                       
+                    </div>
+                </div>               
+            </div>
+        </div>          
+        
         <menu-component></menu-component> 
         <router-view></router-view>      
     `,

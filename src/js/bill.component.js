@@ -3,13 +3,14 @@ window.billComponent = Vue.extend({
         'modal': window.modalComponent
     },
     template: `
-        <ul v-bind:id="o.id" class="dropdown-content" v-for="o in menusDropdown">
-            <li v-for="item in o.items">
-                <a v-link="{name: item.routeName}">{{ item.name }}</a>
+        <ul v-bind:id="o.id" class="dropdown-content my-custom-dropDown" v-for="o in menusDropdown">
+            <li v-for="item in o.items" >
+                <a v-link="{name: item.routeName}" class="my-custom-a">{{ item.name }}</a>
             </li>
         </ul>
         <div class="navbar-fixed">
-            <nav class="teal">
+            <!--<nav class="teal"> -->
+            <nav>
                 <div class="nav-wrapper container">
                     <a href="#" class="right brand-logo">Code Contas</a>
                     <a href="#" data-activates="nav-mobile" class="button-collapse">
@@ -18,9 +19,11 @@ window.billComponent = Vue.extend({
                     <ul class="left hide-on-med-and-down">
                         <li v-for="o in menus">
                            <a v-if="o.dropdownId" class="dropdown-button" href="!#"  v-bind:data-activates="o.dropdownId">
-                              {{ o.name }} <i class="material-icons right">arrow_drop_down</i>
+                             {{ o.name }} <i class="material-icons right">arrow_drop_down</i>
                            </a>
-                            <a v-else v-link="{name: o.routeName}">{{o.name}}</a>
+                            <a v-else v-link="{name: o.routeName}">
+                             {{o.name}} <i class="material-icons left">pie_chart</i>
+                            </a>
                         </li>
                      </ul>
                      <ul id="nav-mobile" class="side-nav">
@@ -29,12 +32,14 @@ window.billComponent = Vue.extend({
                          </li>
                       </ul>                           
                 </div>
-            </nav>           
-        </div>     
+            </nav>
+        </div>    
+        <!-- <button class="btn">teste</button>
+         <p class="my-custom-green">Robinho de Morais</p> 
         <modal>
             <p slot="slot1">Code Education</p>
             <p slot="slot2">Robinho Education</p>
-        </modal>
+        </modal>-->
         <router-view></router-view>
         `,
     created(){

@@ -1,6 +1,6 @@
 'use strict';
 
-var names = ['Salário', 'Investimentos', 'Poupança', 'Extras'];
+var namesReceive = ['Salário', 'Investimentos', 'Poupança', 'Extras'];
 
 window.billReceiveCreateComponent = Vue.extend({
     template: '\n            <div class="container">\n                <div class="row">\n                <h2>Nova conta</h2>\n                <form action="" name="form" @submit.prevent="submit">\n                <div class="row">\n                   <div class="input-field col s6">\n                     <label class="active">Vencimento:</label>\n                     <input type="text" v-model="bill.date_due | dateFormat"\n                     placeholder="Informe a data">\n                   </div>\n                        <div class="input-field col s6">\n                          <label class="active">Valor:</label>\n                            <input type="text" v-model="bill.value | numberFormat">\n                        </div>         \n                </div>\n                                \n                <div class="row">\n                   <div class="input-field col s6">\n                            <label class="active">Nome:</label>\n                            <select v-model="bill.name" id="name" class="browser-default">\n                                <option value="" disabled selected>Escolha um nome</option>\n                                <option v-for="o in names" value="{{ o }}">{{ o }}</option>\n                            </select>\n                   </div>\n                       <div class="input-field col s6">\n                            <input type="checkbox" class="filled-in" v-model="bill.done" id="recebido">\n                            <label for="recebido">Recebido?</label>\n                        </div>         \n                </div>\n          \n                        <div class="row">\n                            <div class="input-field col s12">\n                                <input type="submit" value="Enviar" class="btn btn-large right">\n                            </div>\n                        </div>                        \n                    \n                    </form>   \n                </div>\n            </div>             \n    ',
@@ -9,7 +9,7 @@ window.billReceiveCreateComponent = Vue.extend({
     data: function data() {
         return {
             formType: 'insert',
-            names: names,
+            names: namesReceive,
             bill: new BillRec()
         };
     },
