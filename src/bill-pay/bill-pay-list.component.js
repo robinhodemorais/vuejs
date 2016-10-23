@@ -1,11 +1,8 @@
 window.billPayListComponent = Vue.extend({
     template: `
-            <style type="text/css">
-                .pago {color: green;}
-                .nao-pago {color: red;}
-            </style>
                 <div class="container">
                     <div class="row">
+                    <h2>Minha contas á pagar</h2>
                         <table class="bordered striped highlight centered responsive-table z-depth-5">
                             <thead>
                             <tr>
@@ -23,7 +20,7 @@ window.billPayListComponent = Vue.extend({
                                 <td>{{ o.date_due | dateFormat 'pt-BR'}}</td>
                                 <td>{{ o.name | stringUpperCase}}</td>
                                 <td>{{ o.value | numberFormat 'pt-BR'}}</td>
-                                <td class="minha-classe" :class="{'pago': o.done, 'nao-pago': !o.done}">
+                                <td class="white-text" :class="{'green lighten-2': o.done, 'red lighten-2': !o.done}">
                                     {{ o.done | doneLabel }}
                                 </td>
                                 <td>

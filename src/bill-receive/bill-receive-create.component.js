@@ -2,31 +2,40 @@ window.billReceiveCreateComponent = Vue.extend({
     template:`
             <div class="container">
                 <div class="row">
-                <form action="" name="form" v-on:submit.prevent="submit">
-                        <div class="row">
-                            <label>Vencimento:</label>
-                            <input type="text" v-model="bill.date_due">
-                        </div>
+                <h2>Nova conta</h2>
+                <form action="" name="form" @submit.prevent="submit">
+                <div class="row">
+                   <div class="input-field col s6">
+                     <label class="active">Vencimento:</label>
+                     <input type="text" v-model="bill.date_due | dateFormat"
+                     placeholder="Informe a data">
+                   </div>
+                        <div class="input-field col s6">
+                          <label class="active">Valor:</label>
+                            <input type="text" v-model="bill.value | numberFormat">
+                        </div>         
+                </div>
                                 
-                        <div class="row">
-                            <label>Nome:</label>
+                <div class="row">
+                   <div class="input-field col s6">
+                            <label class="active">Nome:</label>
                             <select v-model="bill.name" id="name" class="browser-default">
                                 <option value="" disabled selected>Escolha um nome</option>
                                 <option v-for="o in names" value="{{ o }}">{{ o }}</option>
                             </select>
-                        </div> 
-          
-                        <div class="row">
-                          <label>Valor:</label>
-                            <input type="text" v-model="bill.value | numberFormat">
-                        </div>         
-                    
-                        <div class="row">
-                            <input type="checkbox" v-model="bill.done" id="recebido">
+                   </div>
+                       <div class="input-field col s6">
+                            <input type="checkbox" class="filled-in" v-model="bill.done" id="recebido">
                             <label for="recebido">Recebido?</label>
                         </div>         
-            
-                        <input type="submit" value="Enviar">
+                </div>
+          
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="submit" value="Enviar" class="btn btn-large right">
+                            </div>
+                        </div>                        
+                    
                     </form>   
                 </div>
             </div>             

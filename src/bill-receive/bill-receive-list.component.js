@@ -1,11 +1,8 @@
 window.billReceiveListComponent = Vue.extend({
     template: `
-            <style type="text/css">
-                .recebido {color: green;}
-                .nao-recebido {color: red;}
-            </style>
                 <div class="container">
                     <div class="row">
+                    <h2>Minha contas á receber</h2>
                         <table class="bordered striped highlight centered responsive-table">
                             <thead>
                             <tr>
@@ -23,7 +20,7 @@ window.billReceiveListComponent = Vue.extend({
                                 <td>{{ o.date_due | dateFormat 'pt-BR'}}</td>
                                 <td>{{ o.name | stringUpperCase}}</td>
                                 <td>{{ o.value | numberFormat 'pt-BR'}}</td>
-                                <td class="minha-classe" :class="{'recebido': o.done, 'nao-recebido': !o.done}">
+                                <td class="white-text" :class="{'green lighten-2': o.done, 'red lighten-2': !o.done}">
                                     {{ o.done | doneLabelReceive }}
                                 </td>
                                 <td>

@@ -24,11 +24,11 @@ window.billPayCreateComponent = Vue.extend({
                                 <input type="text" v-model="bill.date_due | dateFormat"
                                 placeholder="Informe a data">
                             </div>
-                        <div class="input-field col s6">
-                                <label class="active">Valor:</label>
-                                <input type="text" v-model="bill.value | numberFormat">
-                         </div>
-                        
+                            <div class="input-field col s6">
+                                    <label class="active">Valor:</label>
+                                    <input type="text" v-model="bill.value | numberFormat">
+                             </div>
+                        </div>
                         <div class="row">
                             <div class="input-field col s6">
                                 <label class="active">Nome:</label>
