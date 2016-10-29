@@ -12,7 +12,7 @@ const names = [
 //const -> quando é declarado o valor que vai ser apenas para leitura
 //var -> escopo e contexto global
 
-window.billPayCreateComponent = Vue.extend({
+module.exports = {
     template:`
             <div class="container">
                 <div class="row">
@@ -105,4 +105,4 @@ window.billPayCreateComponent = Vue.extend({
         }
 
     }
-});
+};

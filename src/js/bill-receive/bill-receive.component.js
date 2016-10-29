@@ -1,4 +1,4 @@
-window.billReceiveComponent = Vue.extend({
+module.exports = {
     template: `
         <div class="section">
             <div class="container">
@@ -74,5 +74,5 @@ window.billReceiveComponent = Vue.extend({
             this.updateTotal();
         }
     }
-});
+};
 

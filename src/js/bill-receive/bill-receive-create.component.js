@@ -6,7 +6,7 @@ const namesReceive = [
     ]
 ;
 
-window.billReceiveCreateComponent = Vue.extend({
+module.exports = {
     template:`
             <div class="container">
                 <div class="row">
@@ -103,4 +103,4 @@ window.billReceiveCreateComponent = Vue.extend({
             return dateDueObject.toISOString().split('T')[0];
         }
     }
-});
+};
