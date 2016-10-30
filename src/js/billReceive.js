@@ -1,4 +1,4 @@
-class BillRec{
+module.exports = class BillRec{
     constructor(data = {}){
         this.date_due = '';
         this.name = '';

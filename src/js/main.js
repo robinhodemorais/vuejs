@@ -1,6 +1,4 @@
-require('style!css!../css/teste.css');
-require('./bill');
-require('./billReceive');
+require('../sass/app.scss');
 require('./filters');
 require('./resources');
 require([

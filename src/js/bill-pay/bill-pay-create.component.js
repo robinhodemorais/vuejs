@@ -11,7 +11,7 @@ const names = [
 //let -> escopo e contexto local - variavel com ciclo de vida menor - em estrutura de repetição
 //const -> quando é declarado o valor que vai ser apenas para leitura
 //var -> escopo e contexto global
-
+let BillPay = require('../bill');
 module.exports = {
     template:`
             <div class="container">
@@ -67,10 +67,10 @@ module.exports = {
             this.formType = 'update';
             this.getBill(this.$route.params.id);
         }
+    },
+    ready(){
         //para mostrar a lista no combo do materialize
-        $(document).ready(function () {
-            $('#name').material_select();
-        })
+        $('#name').material_select();
     },
     methods: {
         submit() {

@@ -39,12 +39,9 @@ module.exports = {
         </modal>-->
         <router-view></router-view>
         `,
-    created(){
-      //quando o dom estiver montado ai adiciona o sideNav no menu
-      $(document).ready(function () {
-          $('.button-collapse').sideNav();
-          $('.dropdown-button').dropdown();
-      });
+    ready(){
+        $('.button-collapse').sideNav();
+        $('.dropdown-button').dropdown();
     },
     data() {
         return {

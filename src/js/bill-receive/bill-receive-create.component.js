@@ -5,7 +5,7 @@ const namesReceive = [
     'Extras'
     ]
 ;
-
+let BillRec = require('../billReceive');
 module.exports = {
     template:`
             <div class="container">
@@ -63,10 +63,10 @@ module.exports = {
             this.formType = 'update';
             this.getBill(this.$route.params.id);
         }
+    },
+    ready(){
         //para mostrar a lista no combo do materialize
-        $(document).ready(function () {
-            $('#name').material_select();
-        })
+        $('#name').material_select();
     },
     methods: {
         submit() {
