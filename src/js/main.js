@@ -72,3 +72,4 @@ require([
         '*': '/bill-pays'
     });
 });
+console.log('teste');
