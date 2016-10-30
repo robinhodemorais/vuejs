@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
     entry: './src/js/main.js',
     output: {
@@ -5,6 +7,9 @@ module.exports = {
         filename: 'app.bundle.js',
         publicPath: '/dist/'
     },
+    plugins:[
+       new webpack.HotModuleReplacementPlugin()
+    ],
     module: {
         loaders:[
             {
@@ -27,6 +32,8 @@ module.exports = {
     },
     devServer: {
         host: '0.0.0.0',
+        /*inclui um JS na app, para controlar o live-reload, para atualizar o broswer*/
+        inline: true,
         watchOptions: {
             poll: true,
             aggregateTimeout: 300
