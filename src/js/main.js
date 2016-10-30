@@ -1,3 +1,14 @@
+require('jquery');
+require('materialize-css');
+/*cria uma instancia global do vuejs*/
+window.Vue = require('vue');
+require('vue-resource');
+/*<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
+    <script type="text/javascript" src="node_modules/vue-router/dist/vue-router.min.js"></script>
+    <script type="text/javascript" src="node_modules/vue-resource/dist/vue-resource.min.js"></script>
+*/
 require('../sass/app.scss');
 require('./filters');
 require('./resources');
@@ -18,6 +29,7 @@ require([
                  billReceiveCreateComponent,
                  dashboardComponent,
                  billComponent) {
+    let VueRouter = require('vue-router');
     let router = new VueRouter();
     router.map({
         '/': {
