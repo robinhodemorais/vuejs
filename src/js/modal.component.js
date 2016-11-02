@@ -4,17 +4,19 @@ module.exports = {
             <div class="modal-content">
                 <slot name="content"></slot>
             </div>
-            <div class="modal-content">
+            <div class="modal-footer">
                 <slot name="footer"></slot>
             </div>
         </div>
     `,
-    props: ['modal'],
-    data() {
-        return {
-            modal: {
-                id: ''
+    props: {
+        modal: {
+            type: Object,
+            default(){
+                return {
+                    id: ''
+                }
             }
-        };
+        }
     }
 };
