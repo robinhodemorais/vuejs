@@ -1,4 +1,3 @@
-require('jquery');
 require('materialize-css');
 /*cria uma instancia global do vuejs*/
 window.Vue = require('vue');

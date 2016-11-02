@@ -1,4 +1,6 @@
 var webpack = require('webpack');
+var ExtractPlugin = require('extract-text-webpack-plugin');
+var ExtractCSS = new ExtractPlugin('css/app.css');
 
 module.exports = {
     devtool: 'source-map',
@@ -9,7 +11,13 @@ module.exports = {
         publicPath: '/dist/'
     },
     plugins:[
+       new webpack.ProvidePlugin({
+            'window.$':'jquery',
+            'window.jQuery':'jquery'
+        }),
+       ExtractCSS,
        new webpack.HotModuleReplacementPlugin()
+
     ],
     module: {
         loaders:[
@@ -27,7 +35,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: ['style','css','sass']
+                loader: ExtractCSS.extract(['css','sass'])
             }
         ]
     },
