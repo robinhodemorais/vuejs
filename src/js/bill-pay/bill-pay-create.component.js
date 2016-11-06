@@ -1,3 +1,6 @@
+import {BillResource} from '../resources';
+import {BillPay} from '../bill';
+
 const names = [
     'Conta de luz',
     'Conta de água',
@@ -11,8 +14,8 @@ const names = [
 //let -> escopo e contexto local - variavel com ciclo de vida menor - em estrutura de repetição
 //const -> quando é declarado o valor que vai ser apenas para leitura
 //var -> escopo e contexto global
-let BillPay = require('../bill');
-module.exports = {
+//let BillPay = require('../bill');
+export default {
     template:`
             <div class="container">
                 <div class="row">
@@ -77,13 +80,13 @@ module.exports = {
             var data = this.bill.toJSON();
             //let self = this;
             if(this.formType == 'insert'){
-                Bill.save({},data).then((response) => {
+                BillResource.save({},data).then((response) => {
                     Materialize.toast('Conta criada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-pay.list'});
                 });
             }else{
-                Bill.update({id:this.bill.id},data).then((response) =>{
+                BillResource.update({id:this.bill.id},data).then((response) =>{
                     Materialize.toast('Conta atualizada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-pay.list'});
@@ -92,7 +95,7 @@ module.exports = {
         },
         getBill(id) {
             //let self = this;
-            Bill.get({id: id}).then((response) => {
+            BillResource.get({id: id}).then((response) => {
                 this.bill = new BillPay(response.data);
             });
         },

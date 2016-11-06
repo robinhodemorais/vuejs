@@ -7,7 +7,13 @@ let clients = [
     {name: 'Cliente 5'},
 ];
 
-export {clients};
+/*
+* default informa que vai exportar somente uma estrutura
+* dessa forma podemos colocar qualquer nome na declaração
+* do main
+* export default {clients};
+* */
+export default {clients};
 
 /*define('clients', [], function () {
     var clients = [

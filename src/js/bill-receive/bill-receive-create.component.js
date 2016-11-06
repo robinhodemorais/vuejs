@@ -1,3 +1,6 @@
+import {BillResourceReceive} from '../resources';
+import {BillRec} from '../billReceive';
+
 const namesReceive = [
     'Salário',
     'Investimentos',
@@ -5,8 +8,8 @@ const namesReceive = [
     'Extras'
     ]
 ;
-let BillRec = require('../billReceive');
-module.exports = {
+//let BillRec = require('../billReceive');
+export default {
     template:`
             <div class="container">
                 <div class="row">
@@ -74,13 +77,13 @@ module.exports = {
             //var data = Vue.util.extend(this.bill, {date_due:this.getDateDue(this.bill.date_due)});
             //let self = this;
             if(this.formType == 'insert'){
-                BillReceive.save({},data).then((response) => {
+                BillResourceReceive.save({},data).then((response) => {
                     Materialize.toast('Conta criada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-receive.list'});
                 });
             }else{
-                BillReceive.update({id:this.bill.id},data).then((response) => {
+                BillResourceReceive.update({id:this.bill.id},data).then((response) => {
                     Materialize.toast('Conta criada com sucesso!', 4000);
                     this.$dispatch('change-info');
                     this.$router.go({name: 'bill-receive.list'});
@@ -89,7 +92,7 @@ module.exports = {
         },
         getBill(id) {
            // let self = this;
-            BillReceive.get({id: id}).then((response) => {
+            BillResourceReceive.get({id: id}).then((response) => {
                 //this.bill = response.data;
                 this.bill = new BillRec(response.data)
             });

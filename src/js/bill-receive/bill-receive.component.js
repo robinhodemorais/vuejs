@@ -1,4 +1,6 @@
-module.exports = {
+import {BillResourceReceive} from '../resources';
+
+export default {
     template: `
         <div class="section">
             <div class="container">
@@ -57,13 +59,13 @@ module.exports = {
         /*metodo que faz a requisição da api*/
         updateStatus() {
             //let self = this;
-            BillReceive.query().then((response) => {
+            BillResourceReceive.query().then((response) => {
                 this.calculateStatus(response.data);
             });
         },
         updateTotal() {
             //let self = this;
-            BillReceive.total().then((response) => {
+            BillResourceReceive.total().then((response) => {
                 this.total = response.data.total;
             });
         }

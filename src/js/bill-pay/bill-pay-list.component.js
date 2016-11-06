@@ -1,8 +1,10 @@
-let modalComponent = require('../modal.component');
+import {BillResource} from '../resources';
+import ModalComponent from '../modal.component';
+//let modalComponent = require('../modal.component');
 
-module.exports = {
+export default {
     components:{
-        'modal': modalComponent
+        'modal': ModalComponent
     },
     template: `
                 <div class="container">
@@ -63,7 +65,7 @@ module.exports = {
         };
     },
     created(){
-        Bill.query().then((response) => {
+        BillResource.query().then((response) => {
             //quando usa o arrow functions pode utilizar o this que ira buscar
             //da classe pai, da classe que está a funcão
             this.bills = response.data;
@@ -72,7 +74,7 @@ module.exports = {
     methods: {
         deleteBill() {
            // if(confirm('Deseja excluir esta conta?')){
-                Bill.delete({id: this.billToDelete.id}).then((response) => {
+            BillResource.delete({id: this.billToDelete.id}).then((response) => {
                     this.bills.$remove(this.billToDelete);
                     this.billToDelete = null;
                     Materialize.toast('Conta excluida com sucesso!', 4000);

@@ -1,4 +1,7 @@
-module.exports = {
+import {BillResource} from '../resources';
+import {BillResourceReceive} from '../resources';
+
+export default {
     template: `
          <div class="section">
             <div class="container">
@@ -45,13 +48,13 @@ module.exports = {
     methods: {
         updateTotalPay: function () {
             let self = this;
-            Bill.total().then(function (response) {
+            BillResource.total().then(function (response) {
                 self.totalPay = response.data.total;
             });
         },
         updateTotalReceive: function () {
             let self = this;
-            BillReceive.total().then(function (response) {
+            BillResourceReceive.total().then(function (response) {
                 self.totalReceive = response.data.total;
             });
         }

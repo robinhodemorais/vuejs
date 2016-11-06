@@ -1,10 +1,13 @@
-import {clients} from './clients';
-import {soma} from './funcao';
-import {teste} from './variables';
+import colecao from './clients';
+import * as bloco from './funcao';
+import {teste as variavel} from './variables';
 
-console.log(clients);
-console.log(soma(10,15));
-console.log(teste);
+let object = new bloco.Teste();
+
+console.log(colecao);
+console.log(bloco.soma(10,5));
+console.log(variavel);
+object.mostrar();
 
 //com amdjs
 /*require(['./clients', './funcao'], function (colecao,minhaFuncao) {
