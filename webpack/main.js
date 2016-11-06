@@ -1,5 +1,13 @@
+import {clients} from './clients';
+import {soma} from './funcao';
+import {teste} from './variables';
+
+console.log(clients);
+console.log(soma(10,15));
+console.log(teste);
+
 //com amdjs
-require(['./clients', './funcao'], function (colecao,minhaFuncao) {
+/*require(['./clients', './funcao'], function (colecao,minhaFuncao) {
     //em colecao pode ser qualquer nome
     console.log(colecao);
 
@@ -8,7 +16,7 @@ require(['./clients', './funcao'], function (colecao,minhaFuncao) {
     //console.log(minhaVariavel);
     console.log(require('./variables'));
 });
-
+*/
 
 
 /*
