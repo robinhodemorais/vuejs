@@ -8,7 +8,8 @@
     "babel": "CHOKIDAR_USEPOLLING=true babel src --out-dir dist --watch",
     "sass": "node-sass ./src/sass -o ./dist/css",
     "sass:w": "node-sass ./src/sass -o ./dist/css -w",
-    "start": "concurrently \"npm run babel\" \"npm run sass\" \"npm run sass:w\" \"babel\" \"lite-server\""
+    "start": "webpack-dev-server --progress",
+    "build": "webpack"
   },
   "author": "Robinho de Morais",
   "license": "ISC",

@@ -1,12 +1,12 @@
 ///ES6 Module
 import './bootstrap';
-import  BillPayComponent from './bill-pay/bill-pay.component';
-import  BillPayListComponent from './bill-pay/bill-pay-list.component';
-import  BillPayCreateComponent from './bill-pay/bill-pay-create.component';
-import  BillReceiveComponent from './bill-receive/bill-receive.component';
-import  BillReceiveListComponent from './bill-receive/bill-receive-list.component';
-import  BillReceiveCreateComponent from './bill-receive/bill-receive-create.component';
-import  BillDashBoardComponent from './dashboard/dashboard.component';
+import  BillPayComponent from './bill-pay/BillPay.vue';
+import  BillPayListComponent from './bill-pay/BillPayList.vue';
+import  BillPayCreateComponent from './bill-pay/BillPayCreate.vue';
+import  BillReceiveComponent from './bill-receive/BillReceive.vue';
+import  BillReceiveListComponent from './bill-receive/BillReceiveList.vue';
+import  BillReceiveCreateComponent from './bill-receive/BillReceiveCreate.vue';
+import  BillDashBoardComponent from './dashboard/Dashboard.vue';
 import  BillComponent from './Bill.vue';
 
 //common.js

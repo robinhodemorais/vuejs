@@ -70,9 +70,3 @@
         }
     };
 </script>
-
-<style type="text/css">
-    p{
-        color: yellow !important;
-    }
-</style>
