@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8093170f-7db5-46f7-8457-77a0ef5c3ce8" name="Default" comment="Refatorando para ES6 Modules">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace (Cópia em conflito de DESKTOP-8JQ5JRL 2016-11-06).xml" />
+    <list default="true" id="8093170f-7db5-46f7-8457-77a0ef5c3ce8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/main.js" afterPath="$PROJECT_DIR$/src/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/bill.component.js" afterPath="$PROJECT_DIR$/src/js/Bill.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Bill.vue" afterPath="$PROJECT_DIR$/src/js/Bill.vue" />
     </list>
     <ignored path="vue.js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,32 +24,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Bill.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Bill.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/Bill.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+            <state relative-caret-position="707">
+              <caret line="74" column="6" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
               <folding>
-                <marker date="1478477377699" expanded="true" signature="1750:2883" ph="{...}" />
-                <marker date="1478477377699" expanded="true" signature="1767:1869" ph="{...}" />
-                <marker date="1478477377699" expanded="true" signature="1886:2877" ph="{...}" />
-                <marker date="1478477377699" expanded="true" signature="1907:2866" ph="{...}" />
-                <marker date="1478477377699" expanded="true" signature="1932:2222" ph="[...]" />
-                <marker date="1478477377699" expanded="true" signature="2255:2851" ph="[...]" />
-                <marker date="1478477377699" expanded="true" signature="2277:2538" ph="{&quot;id&quot;: 'bill-pay'...}" />
-                <marker date="1478477377699" expanded="true" signature="2326:2516" ph="[...]" />
-                <marker date="1478477377699" expanded="true" signature="2560:2833" ph="{&quot;id&quot;: 'bill-receive'...}" />
-                <marker date="1478477377699" expanded="true" signature="2613:2811" ph="[...]" />
+                <marker date="1478477837085" expanded="true" signature="1750:2883" ph="{...}" />
+                <marker date="1478477837085" expanded="true" signature="1767:1869" ph="{...}" />
+                <marker date="1478477837085" expanded="true" signature="1886:2877" ph="{...}" />
+                <marker date="1478477837085" expanded="true" signature="1907:2866" ph="{...}" />
+                <marker date="1478477837085" expanded="true" signature="1932:2222" ph="[...]" />
+                <marker date="1478477837085" expanded="true" signature="2255:2851" ph="[...]" />
+                <marker date="1478477837085" expanded="true" signature="2277:2538" ph="{&quot;id&quot;: 'bill-pay'...}" />
+                <marker date="1478477837085" expanded="true" signature="2326:2516" ph="[...]" />
+                <marker date="1478477837085" expanded="true" signature="2560:2833" ph="{&quot;id&quot;: 'bill-receive'...}" />
+                <marker date="1478477837085" expanded="true" signature="2613:2811" ph="[...]" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="418">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="e#14#35#0" expanded="true" />
               </folding>
@@ -410,14 +406,7 @@
       <workItem from="1478449034210" duration="1040000" />
       <workItem from="1478450289536" duration="2147000" />
       <workItem from="1478475317585" duration="1910000" />
-      <workItem from="1478477270129" duration="455000" />
-    </task>
-    <task id="LOCAL-00002" summary="Refatoração">
-      <created>1474417343313</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1474417343313</updated>
+      <workItem from="1478477270129" duration="881000" />
     </task>
     <task id="LOCAL-00003" summary="Navegação e SPA">
       <created>1474756999079</created>
@@ -755,11 +744,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478452421033</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Instalando vue-loader">
+      <created>1478477744833</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1478477744833</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220050000" />
+    <option name="totallyTimeSpent" value="220476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -810,7 +806,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modals" />
     <MESSAGE value="ModalComponent" />
     <MESSAGE value="Excluindo Conta com o ModalComponent" />
     <MESSAGE value="Excluindo Contas a Receber com o ModalComponent" />
@@ -835,7 +830,8 @@
     <MESSAGE value="Separando CSS" />
     <MESSAGE value="Introdução a ES6 Moduloes" />
     <MESSAGE value="Refatorando para ES6 Modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatorando para ES6 Modules" />
+    <MESSAGE value="Instalando vue-loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instalando vue-loader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1094,34 +1090,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/Bill.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-          <folding>
-            <marker date="1478477377699" expanded="true" signature="1750:2883" ph="{...}" />
-            <marker date="1478477377699" expanded="true" signature="1767:1869" ph="{...}" />
-            <marker date="1478477377699" expanded="true" signature="1886:2877" ph="{...}" />
-            <marker date="1478477377699" expanded="true" signature="1907:2866" ph="{...}" />
-            <marker date="1478477377699" expanded="true" signature="1932:2222" ph="[...]" />
-            <marker date="1478477377699" expanded="true" signature="2255:2851" ph="[...]" />
-            <marker date="1478477377699" expanded="true" signature="2277:2538" ph="{&quot;id&quot;: 'bill-pay'...}" />
-            <marker date="1478477377699" expanded="true" signature="2326:2516" ph="[...]" />
-            <marker date="1478477377699" expanded="true" signature="2560:2833" ph="{&quot;id&quot;: 'bill-receive'...}" />
-            <marker date="1478477377699" expanded="true" signature="2613:2811" ph="[...]" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="418">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
             <element signature="e#14#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/Bill.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="74" column="6" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
+          <folding>
+            <marker date="1478477837085" expanded="true" signature="1750:2883" ph="{...}" />
+            <marker date="1478477837085" expanded="true" signature="1767:1869" ph="{...}" />
+            <marker date="1478477837085" expanded="true" signature="1886:2877" ph="{...}" />
+            <marker date="1478477837085" expanded="true" signature="1907:2866" ph="{...}" />
+            <marker date="1478477837085" expanded="true" signature="1932:2222" ph="[...]" />
+            <marker date="1478477837085" expanded="true" signature="2255:2851" ph="[...]" />
+            <marker date="1478477837085" expanded="true" signature="2277:2538" ph="{&quot;id&quot;: 'bill-pay'...}" />
+            <marker date="1478477837085" expanded="true" signature="2326:2516" ph="[...]" />
+            <marker date="1478477837085" expanded="true" signature="2560:2833" ph="{&quot;id&quot;: 'bill-receive'...}" />
+            <marker date="1478477837085" expanded="true" signature="2613:2811" ph="[...]" />
           </folding>
         </state>
       </provider>
