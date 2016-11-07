@@ -7,7 +7,7 @@ import  BillReceiveComponent from './bill-receive/bill-receive.component';
 import  BillReceiveListComponent from './bill-receive/bill-receive-list.component';
 import  BillReceiveCreateComponent from './bill-receive/bill-receive-create.component';
 import  BillDashBoardComponent from './dashboard/dashboard.component';
-import  BillComponent from './bill.component';
+import  BillComponent from './Bill.vue';
 
 //common.js
 /*require('./bootstrap');

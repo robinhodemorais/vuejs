@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var ExtractPlugin = require('extract-text-webpack-plugin');
-var ExtractCSS = new ExtractPlugin('css/app.css');
+var extractCSS = new ExtractPlugin('css/app.css');
 
 module.exports = {
     devtool: 'source-map',
@@ -12,22 +12,18 @@ module.exports = {
     },
     plugins:[
        new webpack.ProvidePlugin({
-            'window.$':'jquery',
-            'window.jQuery':'jquery'
+            'window.$': 'jquery',
+            'window.jQuery': 'jquery'
         }),
-       ExtractCSS,
+       extractCSS,
        new webpack.HotModuleReplacementPlugin()
-
     ],
     module: {
         loaders:[
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015']
-                }
+                loader: 'babel'
             },
             {
                 test: /\.(woff|woff2|ttf|svg|eot)$/,
@@ -35,7 +31,11 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: ExtractCSS.extract(['css','sass'])
+                loader: extractCSS.extract(['css','sass'])
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue'
             }
         ]
     },
